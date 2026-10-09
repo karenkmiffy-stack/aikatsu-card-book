@@ -171,13 +171,94 @@ input[type="search"] {
   </p>
 </div>
 
-<script>
 const defaultCards = [
-  {id:1,name:"サンプルカード 1",number:"IC-001",art:"🌸",owned:true},
-  {id:2,name:"サンプルカード 2",number:"IC-002",art:"💎",owned:false},
-  {id:3,name:"サンプルカード 3",number:"IC-003",art:"🎀",owned:false}
-];
-
+  {id:1, name:"オーロラキスキャミソール", number:"E1-01_PR", art:"🌸", owned:false},
+  {id:2, name:"オーロラキスドレープスカート", number:"E1-02_PR", art:"🌸", owned:false},
+  {id:3, name:"オーロラキスバレエシューズ", number:"E1-03_PR", art:"🌸", owned:false},
+  {id:4, name:"オーロラキスリボン", number:"E1-04_PR", art:"🌸", owned:false},
+  {id:5, name:"アイスブルーフリルキャミソール", number:"E1-05_R", art:"💎", owned:false},
+  {id:6, name:"アイスブルーフリルパニエ", number:"E1-06_R", art:"💎", owned:false},
+  {id:7, name:"アイスブルーシューズ", number:"E1-07_R", art:"💎", owned:false},
+  {id:8, name:"ジュエルつきパープルリボン", number:"E1-08_R", art:"💎", owned:false},
+  {id:9, name:"小花柄イエローワンピ", number:"E1-09_R", art:"🎀", owned:false},
+  {id:10, name:"ドリーミースタートップス", number:"E1-10_R", art:"🎀", owned:false},
+  {id:11, name:"ドリーミースタースカート", number:"E1-11_R", art:"🎀", owned:false},
+  {id:12, name:"ドリーミースターパンプス", number:"E1-12_R", art:"🎀", owned:false},
+  {id:13, name:"チャーミーリボントップス", number:"E1-13_R", art:"🎀", owned:false},
+  {id:14, name:"チャーミーリボンスカート", number:"E1-14_R", art:"🎀", owned:false},
+  {id:15, name:"チャーミーリボンサンダル", number:"E1-15_R", art:"🎀", owned:false},
+  {id:16, name:"チャーミーリボンアクセ", number:"E1-16_R", art:"🎀", owned:false},
+  {id:17, name:"クリアネスイエロートップス", number:"E1-17_R", art:"💛", owned:false},
+  {id:18, name:"クリアネスイエロースカート", number:"E1-18_R", art:"💛", owned:false},
+  {id:19, name:"クリアネスイエローパンプス", number:"E1-19_R", art:"💛", owned:false},
+  {id:20, name:"クリアネスイエローアクセ", number:"E1-20_R", art:"💛", owned:false},
+  {id:21, name:"ピンクステージベスト", number:"E1-21_N", art:"🌸", owned:false},
+  {id:22, name:"ピンクステージスカート", number:"E1-22_N", art:"🌸", owned:false},
+  {id:23, name:"ピンクステージシューズ", number:"E1-23_N", art:"🌸", owned:false},
+  {id:24, name:"パフスリーブレモンカラーボレロ", number:"E1-24_N", art:"🍋", owned:false},
+  {id:25, name:"ラベンダーフリルスカート", number:"E1-25_N", art:"💜", owned:false},
+  {id:26, name:"イエロー編み上げブーツ", number:"E1-26_N", art:"💛", owned:false},
+  {id:27, name:"ピンクブロッサムトップス", number:"E1-27_N", art:"🌸", owned:false},
+  {id:28, name:"ピンクブロッサムスカート", number:"E1-28_N", art:"🌸", owned:false},
+  {id:29, name:"ピンクブロッサムブーツ", number:"E1-29_N", art:"🌸", owned:false},
+  {id:30, name:"オデットスワン", number:"E1-30_ER", art:"🦢", owned:false},
+  {id:31, name:"リルリボンストーリー", number:"E1-31_ER", art:"🎀", owned:false},
+  {id:32, name:"オーロラペガサス", number:"E1-32_ER", art:"🦄", owned:false},
+  {id:33, name:"天の川コズミックワンショルダー", number:"E1-33_PR", art:"🌌", owned:false},
+  {id:34, name:"天の川コズミックスカート", number:"E1-34_PR", art:"🌌", owned:false},
+  {id:35, name:"天の川コズミックブーツ", number:"E1-35_PR", art:"🌌", owned:false},
+  {id:36, name:"天の川コズミックカチューシャ", number:"E1-36_PR", art:"🌌", owned:false},
+  {id:37, name:"プリズムサイバーグラフィックワンピ", number:"E1-37_R", art:"💎", owned:false},
+  {id:38, name:"ブラックモダンボレロ", number:"E1-38_R", art:"🖤", owned:false},
+  {id:39, name:"ブラックフューチャーエナメルショートパンツ", number:"E1-39_R", art:"🖤", owned:false},
+  {id:40, name:"ブラックフューチャーブーツ", number:"E1-40_R", art:"🖤", owned:false},
+  {id:41, name:"ブルーステージブラウス", number:"E1-41_N", art:"💙", owned:false},
+  {id:42, name:"ブルーステージスカート", number:"E1-42_N", art:"💙", owned:false},
+  {id:43, name:"ブルーステージブーツ", number:"E1-43_N", art:"💙", owned:false},
+  {id:44, name:"ブラックストライプジャケット", number:"E1-44_N", art:"🖤", owned:false},
+  {id:45, name:"ダイヤモンドチェックスカート", number:"E1-45_N", art:"💎", owned:false},
+  {id:46, name:"ブルーストラップシューズ", number:"E1-46_N", art:"💙", owned:false},
+  {id:47, name:"ネイビーブロッサムトップス", number:"E1-47_N", art:"💙", owned:false},
+  {id:48, name:"ネイビーブロッサムスカート", number:"E1-48_N", art:"💙", owned:false},
+  {id:49, name:"ネイビーブロッサムブーツ", number:"E1-49_N", art:"💙", owned:false},
+  {id:50, name:"ドリームエミネンス", number:"E1-50_ER", art:"✨", owned:false},
+  {id:51, name:"レジェンダリールージュドレス", number:"E1-51_PR", art:"❤️", owned:false},
+  {id:52, name:"レジェンダリールージュパンプス", number:"E1-52_PR", art:"❤️", owned:false},
+  {id:53, name:"アグハレッドコクーンワンピ", number:"E1-53_R", art:"❤️", owned:false},
+  {id:54, name:"アグハレッドミュール", number:"E1-54_R", art:"❤️", owned:false},
+  {id:55, name:"パープルジュエリーワンピ", number:"E1-55_R", art:"💜", owned:false},
+  {id:56, name:"ゴールドチェーングラディエーター", number:"E1-56_R", art:"💛", owned:false},
+  {id:57, name:"アグハロゴフリルトップス", number:"E1-57_R", art:"❤️", owned:false},
+  {id:58, name:"アグハファーつきスカート", number:"E1-58_R", art:"❤️", owned:false},
+  {id:59, name:"ブラックシフォンカチューシャ", number:"E1-59_R", art:"🖤", owned:false},
+  {id:60, name:"パープルステージトップス", number:"E1-60_N", art:"💜", owned:false},
+  {id:61, name:"パープルステージスカート", number:"E1-61_N", art:"💜", owned:false},
+  {id:62, name:"パープルステージシューズ", number:"E1-62_N", art:"💜", owned:false},
+  {id:63, name:"フラワーレーストップス", number:"E1-63_N", art:"🌸", owned:false},
+  {id:64, name:"フラワーレーススカート", number:"E1-64_N", art:"🌸", owned:false},
+  {id:65, name:"フラワーレースブーツ", number:"E1-65_N", art:"🌸", owned:false},
+  {id:66, name:"スカイブルーリボン", number:"E1-66_N", art:"💙", owned:false},
+  {id:67, name:"ピンクチェックワンピ", number:"E1-67_N", art:"🌸", owned:false},
+  {id:68, name:"イエローフリルスカート", number:"E1-68_N", art:"💛", owned:false},
+  {id:69, name:"ブルーフラワーシューズ", number:"E1-69_N", art:"💙", owned:false},
+  {id:70, name:"ホワイトレースアクセ", number:"E1-70_N", art:"🤍", owned:false},
+  {id:71, name:"レッドステージトップス", number:"E1-71_N", art:"❤️", owned:false},
+  {id:72, name:"レッドステージスカート", number:"E1-72_N", art:"❤️", owned:false},
+  {id:73, name:"レッドステージシューズ", number:"E1-73_N", art:"❤️", owned:false},
+  {id:74, name:"ミントフリルトップス", number:"E1-74_N", art:"💚", owned:false},
+  {id:75, name:"ミントフリルスカート", number:"E1-75_N", art:"💚", owned:false},
+  {id:76, name:"ミントフリルシューズ", number:"E1-76_N", art:"💚", owned:false},
+  {id:77, name:"ラベンダーステージトップス", number:"E1-77_N", art:"💜", owned:false},
+  {id:78, name:"ラベンダーステージスカート", number:"E1-78_N", art:"💜", owned:false},
+  {id:79, name:"ラベンダーステージシューズ", number:"E1-79_N", art:"💜", owned:false},
+  {id:80, name:"ゴールドステージトップス", number:"E1-80_N", art:"💛", owned:false},
+  {id:81, name:"ゴールドステージスカート", number:"E1-81_N", art:"💛", owned:false},
+  {id:82, name:"ゴールドステージシューズ", number:"E1-82_N", art:"💛", owned:false},
+  {id:83, name:"スターライトトップス", number:"E1-83_N", art:"⭐", owned:false},
+  {id:84, name:"スターライトスカート", number:"E1-84_N", art:"⭐", owned:false},
+  {id:85, name:"スターライトシューズ", number:"E1-85_N", art:"⭐", owned:false}
+  ];
+  
 const STORAGE_KEY = "aikatsu-card-collection-v1";
 let cards;
 
@@ -189,7 +270,7 @@ try {
   cards = null;
 }
 
-if (!cards) {
+if (!cards || cards.length <= 3) {
   cards = defaultCards.map(card => ({...card}));
 }
 
